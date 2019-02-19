@@ -1,0 +1,33 @@
+page-staging-false {
+.content-ios{
+    text-align: center;
+}
+img{
+    width:rem(98);
+    height:rem(98);
+    margin-top:rem(80);
+}
+h3{
+    font-size: rem(40);
+    color:#222;
+    font-weight:bold;
+}
+p{
+    font-size: rem(28);
+    color:#666666;
+    font-weight:500;
+}
+.button-ios-danger{
+    background-color:#E65D4B;
+    width:rem(360);
+    display: block;
+    margin:rem(40) auto;
+}
+.button-outline-ios-light{
+    color:#999999 ;
+    border-color:#999999 ;
+    width:rem(360);
+    display: block;
+    margin:auto;
+}
+}

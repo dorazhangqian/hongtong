@@ -1,3 +1,145 @@
 page-home {
-
+    //swiper
+    ion-slides {
+        height: rem(342);
+    }
+    .swiper-slide {
+        width: rem(600) !important;
+        align-items: normal;
+        -webkit-align-items: normal
+    }
+    .swiper-slide-next .slide-zoom,
+    .swiper-slide-prev .slide-zoom {
+        display: flex;
+        align-items: center;
+        width: auto;
+    }
+    .swiper-slide-next img,
+    .swiper-slide-prev img {
+        height: rem(232);
+        border-radius: rem(26);
+        box-shadow: 0 rem(10) rem(24) #f5c5cb;
+    }
+    .swiper-slide-active img {
+        height: rem(316);
+        border-radius: rem(26);
+        box-shadow: 0 rem(10) rem(24) #f5c5cb;
+    }
+    .swiper-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-pagination-bullet {
+        background: #8C8C8C;
+        bottom: 50px;
+        width: rem(12);
+        height: rem(4);
+        border-radius: rem(2);
+    }
+    .swiper-pagination-bullet-active {
+        background: #E65D4B;
+        width: rem(10);
+        height: rem(10);
+        border-radius: 50%;
+    }
+    .swiper-pagination-fraction,
+    .swiper-pagination-custom,
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+        left: 0;
+        bottom: 2px;
+        width: 100%;
+    }
+    .list-header-ios,
+    .item-ios {
+        padding-left: 0;
+    }
+    .label-ios {
+        margin: 0
+    }
+    .list-ios[inset] .item {
+        border-bottom: none;
+    }
+    //套餐标题
+    .item-ios.item-block .item-inner {
+        padding-right: 0
+    }
+    .listTitle .label-ios {
+        display: flex;
+        align-items: center;
+    }
+    .listTitle .label-ios img {
+        height: rem(22);
+        width: rem(14);
+        margin-left: rem(20)
+    }
+    .listTitle .label-ios div {
+        width: 100%;
+        flex: 1;
+        font-size: rem(36);
+        font-weight: bold;
+    }
+    .listTitle .label-ios div:nth-child(2) {
+        text-align: right;
+        font-size: rem(26);
+        font-weight: 500;
+    }
+    //套餐标题list
+    .item-ios ion-thumbnail ion-img,
+    .item-ios ion-thumbnail img {
+        width: rem(200);
+        height: rem(200);
+    }
+    .listRight {
+        display: flex;
+        flex-direction: column;
+        height: rem(200);
+        padding-top: rem(12)
+    }
+    .listT {
+        flex: 1;
+    }
+    .listT div {
+        font-size: rem(32);
+        color: #222222;
+        font-weight: 500;
+        white-space: normal;
+        text-overflow: -o-ellipsis-lastline;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .listT p {
+        font-size: rem(24);
+        color: #999999;
+        font-weight: 500;
+    }
+    .listB {
+        display: flex;
+        align-items: center;
+    }
+    .listB img {
+        height: rem(30) !important;
+        width: rem(30) !important;
+        margin-right: rem(14)
+    }
+    .listB div {
+        flex: 1;
+    }
+    .listB div:nth-child(1) {
+        font-size: rem(32);
+        color: #E65D4B;
+        font-weight: bold;
+    }
+    .listB div:nth-child(2) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: rem(26);
+        color: #666666;
+        font-weight: 500;
+    }
 }

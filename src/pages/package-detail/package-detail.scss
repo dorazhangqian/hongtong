@@ -1,0 +1,81 @@
+page-package-detail {
+    //套餐详情
+    .list-ios {
+        margin: 0
+    }
+    .item-ios ion-thumbnail ion-img,
+    .item-ios ion-thumbnail img {
+        width: rem(200);
+        height: rem(200);
+    }
+    .listRight {
+        display: flex;
+        flex-direction: column;
+        height: rem(200);
+        padding-top: rem(12)
+    }
+    .listT {
+        flex: 1;
+    }
+    .listT div {
+        font-size: rem(32);
+        color: #222222;
+        font-weight: 500;
+        white-space: normal;
+        text-overflow: -o-ellipsis-lastline;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .listB {
+        display: flex;
+        align-items: center;
+    }
+    .listB img {
+        height: rem(30) !important;
+        width: rem(30) !important;
+        margin-right: rem(14)
+    }
+    .listB div {
+        flex: 1;
+    }
+    .listB div:nth-child(1) {
+        font-size: rem(32);
+        color: #E65D4B;
+        font-weight: bold;
+    }
+    .listB div:nth-child(2) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: rem(24);
+        color: #666666;
+        font-weight: 500;
+    }
+    .list-ios>.item-block:last-child,
+    .list-ios>.item-wrapper:last-child .item-block {
+        border-bottom: none;
+    }
+    .list-ios>.item-block:first-child {
+        border-top: none;
+    }
+    .detail {
+        padding: 0 16px;
+        color: #666;
+        font-size: rem(26);
+        font-weight: 500;
+        line-height: rem(36);
+    }
+    .doBtn {
+        width: 92%;
+        margin-left: 4%;
+        background-color: #E65D4B;
+        font-size: rem(34);
+        position: fixed;
+        z-index: 2;
+        bottom: rem(20);
+    }
+}

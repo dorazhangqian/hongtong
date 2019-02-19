@@ -1,0 +1,89 @@
+<!--
+  Generated template for the MallPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+	<ion-navbar>
+		<ion-title>商城</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+<ion-content>
+	<ion-slides pager>
+		<ion-slide>
+			<img src="assets/imgs/banner2.png" alt="" />
+		</ion-slide>
+		<ion-slide>
+			<img src="assets/imgs/banner2.png" alt="" />
+		</ion-slide>
+		<ion-slide>
+			<img src="assets/imgs/banner2.png" alt="" />
+		</ion-slide>
+	</ion-slides>
+	<div class='typeSort'>
+		<button ion-button outline>销量</button>
+		<button ion-button outline>价格</button>
+		<div>
+			<img src="" alt="" />
+			<img src="" alt="" />
+
+		</div>
+
+		
+		
+	</div>
+
+	<div class="goodsType">
+		<ion-segment [(ngModel)]="type" (ionChange)="segmentChanged($event)">
+			<ion-segment-button value="type0">
+				全部
+				<div *ngIf='type=="type0"' class="activeType"></div>
+			</ion-segment-button>
+			<ion-segment-button value="type1">
+				分类1
+				<div *ngIf='type=="type1"' class="activeType"></div>
+			</ion-segment-button>
+			<ion-segment-button value="type2">
+				分类2
+				<div *ngIf='type=="type2"' class="activeType"></div>
+			</ion-segment-button>
+			<ion-segment-button value="type3">
+				分类3
+				<div *ngIf='type=="type3"' class="activeType"></div>
+			</ion-segment-button>
+			<ion-segment-button value="type4">
+				分类4
+				<div *ngIf='type=="type4"' class="activeType"></div>
+			</ion-segment-button>
+		</ion-segment>
+	</div>
+
+	<div [ngSwitch]="type" class="typeList">
+		<ion-grid>
+  <ion-row>
+    <ion-col col-6 *ngFor='let item of goodsList'>
+    	<div class="goods">
+    	<img src="{{item.img}}" alt="" />
+    	<div class="goodsName">{{item.name}}</div>
+    	<div class="goodsPN">
+    		<span>{{item.price}} <span>元/月</span></span>
+    		<span>销量：{{item.num}}</span>
+    	</div>
+    	</div>
+    	
+    	
+    	
+    </ion-col>
+    
+  </ion-row>
+  
+</ion-grid>
+		
+
+	</div>
+
+</ion-content>

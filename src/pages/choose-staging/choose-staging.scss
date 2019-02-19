@@ -1,0 +1,118 @@
+page-choose-staging {
+    .content {
+        background-color: #F7F7F7;
+    }
+    .list-ios .item-block .item-inner,
+    .list-ios>.item-block:last-child {
+        border-bottom: none;
+    }
+    .list-ios>.item-block:first-child {
+        border-top: none;
+    }
+    .item-block,
+    .list-ios>.item-block:last-child,
+    .list-ios>.item-wrapper:last-child .item-block {
+        border-bottom: 1px solid #E9E9E9
+    }
+    ion-list {
+        margin: 0;
+        padding: 0 rem(30);
+        display: block;
+        list-style-type: none;
+        background-color: #fff;
+    }
+    .item-ios {
+        font-size: rem(32);
+    }
+    .item-ios [item-right],
+    .item-ios [item-end] {
+        margin: 8px 0;
+        display: flex;
+        align-items: center;
+    }
+    .item-ios,
+    .item-ios.item-block .item-inner {
+        padding: 0
+    }
+    .doBtn {
+        width: 92%;
+        margin-left: 4%;
+        background-color: #E65D4B;
+        font-size: rem(34);
+    }
+    .iconRight {
+        color: #999999;
+        margin-left: rem(20)
+    }
+    ion-item {
+        font-size: rem(32);
+        color: #222
+    }
+    //选择面板
+    .Type {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+        background: rgba(0, 0, 0, 0.3);
+        .typeList {
+            position: fixed;
+            background-color: #fff;
+            width: 100%;
+            height: auto;
+            bottom: 0;
+            .title {
+                height: rem(85);
+                line-height: rem(85);
+                border-bottom: 1px solid #f2f2f2;
+                display: flex;
+                align-items: center;
+            }
+            .title div {
+                flex: 1;
+                font-size: rem(32);
+                font-weight: 500;
+            }
+            .title div:nth-child(1) {
+                color: #666666;
+                padding-left: rem(30)
+            }
+            .title div:nth-child(2) {
+                color: #222222;
+                text-align: center;
+            }
+            .title div:nth-child(3) {
+                color: #E65D4C;
+                text-align: right;
+                padding-right: rem(30)
+            }
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0 rem(30);
+                height: rem(330);
+                overflow-y: scroll;
+                li {
+                    color: #999999;
+                    font-size: rem(30);
+                    font-weight: 500;
+                    height: rem(80);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .isDoor {
+                    color: #333333;
+                    font-size: rem(34);
+                    border-bottom: 1px solid #E6E6E6;
+                    border-top: 1px solid #E6E6E6;
+                    font-weight: bold;
+                    height: rem(90);
+                }
+            }
+        }
+    }
+}

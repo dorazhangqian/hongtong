@@ -1,5 +1,8 @@
 // http://ionicframework.com/docs/theming/
-
+@function rem($px) {
+  @return $px / 37.5 * 1.6rem;
+}
+$primaryColor:#152232;//主题色
 
 // App Global Sass
 // --------------------------------------------------
@@ -14,3 +17,53 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.tabs-ios .tab-button-icon,.tabs-ios .tab-button{
+    color:#999
+}
+.tabs-ios .tab-button[aria-selected=true] .tab-button-icon,.tabs-ios .tab-button:hover:not(.disable-hover), .tabs-ios .tab-button[aria-selected=true]{
+    color:#222
+}
+.ion-tab-icon-base {
+    width: 32px !important;
+    height: 32px !important;
+    padding: 4px 4px 2px;
+}
+.ion-tab-icon-md-base {
+    min-width: 0 !important;
+    height: 32px;
+}
+$tabImageName: 'home' 'shop' 'my';
+@for $i from 1 to 4 {
+    //for ios
+    .ion-ios-tab-#{nth($tabImageName, $i)} {
+        @extend .ion-tab-icon-base;
+        content: url("../assets/imgs/icon_#{nth($tabImageName, $i)}_on@2x.png");
+    }
+    .ion-ios-tab-#{nth($tabImageName, $i)}-outline {
+        @extend .ion-tab-icon-base;
+        content: url("../assets/imgs/icon_#{nth($tabImageName, $i)}_off@2x.png");
+    }
+}
+.ion-ios-tab-task,.ion-ios-tab-task-outline,.ion-ios-tab-master,.ion-ios-tab-master-outline{
+    width: rem(48) !important;
+    height: rem(48) !important;
+}
+
+//首页遮蔽层
+.shadowShare{
+    height:100%;
+    width:100%;
+    background-color: rgba(0,0,0,0.3);
+    position:relative;
+    z-index:12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shadowShare img{
+    height:rem(110);
+    width:rem(110);
+}
+.shadowShare img:nth-child(1){
+    margin-right:rem(94);
+}

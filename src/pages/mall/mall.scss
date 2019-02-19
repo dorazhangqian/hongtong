@@ -1,0 +1,110 @@
+page-mall {
+    //swiper
+    ion-slides {
+        height: rem(280);
+    }
+    .swiper-slide img{
+        height:100%;
+    }
+      .swiper-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-pagination-bullet {
+        background: #fff;
+        bottom: 50px;
+        width: rem(12);
+        height: rem(4);
+        border-radius: rem(2);
+    }
+    .swiper-pagination-bullet-active {
+        background: #E65D4B;
+        width: rem(10);
+        height: rem(10);
+        border-radius: 50%;
+    }
+    .swiper-pagination-fraction,
+    .swiper-pagination-custom,
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+        left: 0;
+        bottom: 10px;
+        width: 100%;
+    }
+    .swiper-pagination-bullet{
+        opacity: 1;
+    }
+    .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{
+        margin: 0 rem(8);
+    }
+    //分类tab
+    .goodsType{
+        box-shadow:0 0 rem(10) rem(3) #ccc;
+    }
+    .segment-ios .segment-button{
+        border:none;
+        color:rem(30);
+        color:#666666;
+    }
+    .segment-ios .segment-button.segment-activated{
+        background-color:#fff ;
+        color:#222;
+        font-weight: bold;
+        font-size: rem(32);
+    }
+    .activeType{
+        width:rem(60);
+        height:rem(4);
+        background-color: #E65D4C;
+        margin: auto;
+    }
+    .segment-ios .segment-button{
+        height:3.1rem;
+    }
+    //商品列表
+    .typeList img{
+        width:rem(360);
+        height:rem(360);
+        border-radius: rem(8);
+    }
+    .typeList .goodsName{
+        font-size: rem(32);
+        color: #222222;
+        font-weight: 500;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        padding:rem(10) rem(24);
+    }
+    .typeList .goodsPN{
+        display: flex;
+        align-items: center;
+        padding:rem(4) rem(24);
+        margin-bottom: rem(30);
+    }
+    .typeList .goodsPN span{
+        flex: 1;
+    }
+    .typeList .goodsPN span:nth-child(1){
+        font-size: rem(32);
+        color: #E65D4B;
+        font-weight: bold;
+    }
+    .typeList .goodsPN span:nth-child(1) span{
+        font-size: rem(20);
+        font-weight:500;
+    }
+    .typeList .goodsPN span:nth-child(2){
+        font-size: rem(22);
+        color: #999999;
+        font-weight: 500;
+        text-align: right;
+    }
+    .goods{
+        border-bottom:1px solid #F0F0F0;
+        border-left:1px solid #F0F0F0;
+        border-right:1px solid #F0F0F0;
+        border-radius: rem(8);
+        width:rem(360);
+    }
+}

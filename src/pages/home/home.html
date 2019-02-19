@@ -1,17 +1,42 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title>鸿遵商贸</ion-title>
+	</ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+	<ion-slides pager loop>
+		<!--(click)="goDetails(item)"-->
+		<ion-slide *ngFor="let item of slideItem">
+			<img src="{{item.img}}" alt="">
+		</ion-slide>
+	</ion-slides>
+
+	<ion-list inset>
+		<ion-list-header class='listTitle'>
+			<div>餐套</div>
+			<div (click)='moreGoods()'>更多<img src="assets/imgs/icon_right_arrow@2x.png" alt="" /></div>
+		</ion-list-header>
+		<ion-item *ngFor='let item of list' (click)='toPackageDetail()'>
+			<ion-thumbnail item-start>
+				<img src="{{item.img}}">
+			</ion-thumbnail>
+			<div class='listRight'>
+				<div class="listT">
+					<div>{{item.name}}</div>
+					<p>销量：{{item.num}}套</p>
+				</div>
+				<div class="listB">
+					<div>{{item.price}}元/月</div>
+					<div (click)='showShare(item.id)'><img src="assets/imgs/icon_share@2x(1).png" alt="" />分享</div>
+				</div>
+			</div>
+		</ion-item>
+	</ion-list>
+
 </ion-content>
+
+<div class='shadowShare' *ngIf=shadowShare (click)='closeShare()'>
+	<img src="assets/imgs/icon_share_wechat_pressed@2x.png" alt="" (click)='share("分享到微信")' />
+	<img src="assets/imgs/icon_share_qq_pressed@2x.png" alt="" (click)='share("分享到朋友圈")' />
+</div>

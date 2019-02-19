@@ -1,0 +1,56 @@
+<!--
+  Generated template for the ChooseStagingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+	<ion-navbar>
+		<ion-title>分期办理</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+<ion-content>
+	<ion-list class='firstList'>
+		<ion-item>
+			<div item-start>支付方式</div>
+			<div item-end (click)="showType($event)">{{bankName==''?'请选择':bankName}}
+				<ion-icon name="arrow-forward" class='iconRight'></ion-icon>
+			</div>
+		</ion-item>
+	</ion-list>
+	<ion-list class='two'>
+		<ion-list-header class='listTitle'>
+			分期方式
+		</ion-list-header>
+		<ion-item *ngFor='let item of stagList'>
+			<div item-start>
+				<ion-checkbox color="danger"></ion-checkbox>
+				<ion-label>{{item.name}}</ion-label>
+			</div>
+			<div item-end>
+				每月 ¥{{item.price}} <span>（含手续费:¥{{item.price2}}/月）</span>
+			</div>
+		</ion-item>
+	</ion-list>
+	<button class='doBtn' ion-button block color="danger" (click)='toStagingFalse()'>确认</button>
+</ion-content>
+
+<div class='Type' *ngIf='showtype'>
+	<div class='typeList'>
+		<div class="title">
+			<div>选择支付方式</div>
+			<div><img (click)='closeType($event)' src="assets/imgs/icon_cancel@2x.png" alt="" /></div>
+		</div>
+		<ul>
+			<li *ngFor='let item of typeList' (click)='chooseType(item.name)'>
+				<div class='left'>
+					<img src="{{item.img}}" alt="" /> {{item.name}}
+				</div>
+				<ion-checkbox class='typeIcon' color="danger" checked='{{item.name==bankName?true:false}}'></ion-checkbox>
+			</li>
+		</ul>
+		<button class='doBtn doBtn2' ion-button block color="danger" (click)='closeType($event)'>确认</button>
+	</div>
