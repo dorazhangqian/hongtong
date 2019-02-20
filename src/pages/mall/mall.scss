@@ -63,8 +63,8 @@ page-mall {
     }
     //商品列表
     .typeList img{
-        width:rem(360);
-        height:rem(360);
+        width:100%;
+        height:auto;
         border-radius: rem(8);
     }
     .typeList .goodsName{
@@ -105,6 +105,35 @@ page-mall {
         border-left:1px solid #F0F0F0;
         border-right:1px solid #F0F0F0;
         border-radius: rem(8);
-        width:rem(360);
+//      width:rem(360);
+    }
+    
+    //排序
+    .typeSort{
+        height:rem(120);
+        padding:rem(30) rem(30) rem(10) rem(30);
+        display: flex;
+        align-items: center;
+    }
+    .typeSort .button-outline-ios{
+        width:rem(140);
+        height:rem(74);
+        border:1px solid #E65D4C;
+        color:#E65D4C;
+        font-size:rem(28)
+    }
+    .typeSort .button-outline-ios.activated{
+        background-color:#fff ;
+    }
+    .typeSort .button-outline-ios img{
+        width:rem(16);
+        min-width:8px;
+        min-height:4px;
+        height:rem(8);
+        display: block;
+        margin-bottom: rem(2);
+    }
+    .typeSort .sortImg{
+        margin-left:rem(20) ;
     }
 }

@@ -1,0 +1,60 @@
+<!--
+  Generated template for the GoodsDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+	<ion-navbar>
+		<ion-title>商品详情</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+<ion-content>
+	<div class="goodsImg">
+		<img src="assets/imgs/goodsimg.png" alt="" />
+	</div>
+	<div class="goodsDetail">
+		<h3>商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题</h3>
+		<p>销量：2000</p>
+		<p>￥300</p>
+		<div class="goodsLine">商品详情</div>
+		<img src="assets/imgs/goodsimg2.png" alt="" />
+		<img src="assets/imgs/goodsimg.png" alt="" />
+	</div>
+	<div class="bottomBox">
+		<div>
+			<div>
+				<div class="cartBadge">
+					<img src="assets/imgs/icon_gwc@2x.png" alt="" />
+					<span>2</span>
+				</div>
+				<span>购物车</span>
+			</div>
+
+		</div>
+		<div>加入购物车</div>
+		<div (click)='showShare()'>立即购买</div>
+	</div>
+</ion-content>
+
+<div class='shadowShare' *ngIf=shadowShare>
+	<img class="imgGoods" src="assets/imgs/goodsimg.png" alt="" />
+	<div class="content">
+		<div class='priceClose'>
+			<div>¥200</div>
+			<img class="imgClose" src="assets/imgs/icon_cancel@2x.png" alt="" (click)='closeShare()' />
+		</div>
+		<div class='num'>
+			<div>数量</div>
+			<div>
+				<img src="assets/imgs/{{disableMinus?'icon_reduce_selection@2x':'icon_reduce@2x'}}.png" alt="" (click)='numF("minus")' />
+				<span>{{num}}</span>
+				<img src="assets/imgs/icon_increase@2x.png" alt="" (click)='numF("add")'/>
+			</div>
+		</div>
+		<button class='doBtn' ion-button block color="danger" (click)='toOrderConfirm()'>确定</button>
+	</div>
+</div>

@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ChooseStaging2Page } from '../choose-staging2/choose-staging2';
+import { NavController, NavParams } from 'ionic-angular';
+import { StagingPage } from '../staging/staging';
 /**
  * Generated class for the ChooseStagingPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-
-@IonicPage()
 @Component({
   selector: 'page-choose-staging',
   templateUrl: 'choose-staging.html',
@@ -41,7 +39,7 @@ export class ChooseStagingPage {
     this.doorName=item;
   }
    toStaging2(){
-  	this.navCtrl.push(ChooseStaging2Page);
+  	this.navCtrl.push(StagingPage);
   }
 
 }

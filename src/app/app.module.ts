@@ -10,10 +10,11 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { PackageDetailPage } from '../pages/package-detail/package-detail';
 import { ChooseStagingPage } from '../pages/choose-staging/choose-staging';
 import { PackageListPage } from '../pages/package-list/package-list';
-import { ChooseStaging2Page } from '../pages/choose-staging2/choose-staging2';
+import { StagingPage } from '../pages/staging/staging';
 import { StagingFalsePage } from '../pages/staging-false/staging-false';
 import { MallPage } from '../pages/mall/mall';
-
+import { GoodsDetailPage } from '../pages/goods-detail/goods-detail';
+import {OrderConfirmPage} from '../pages/order-confirm/order-confirm'
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -29,13 +30,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PackageDetailPage,
     ChooseStagingPage,
     PackageListPage,
-    ChooseStaging2Page,
+    StagingPage,
     StagingFalsePage,
-    MallPage
-    
+    MallPage,
+    GoodsDetailPage,
+    OrderConfirmPage
   ],
   imports: [
-    BrowserModule,
+      BrowserModule,
       IonicModule.forRoot(MyApp, {
       iconMode: 'ios',
       mode: 'ios',  //平台样式
@@ -54,9 +56,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PackageDetailPage,
     ChooseStagingPage,
     PackageListPage,
-    ChooseStaging2Page,
+    StagingPage,
     StagingFalsePage,
-    MallPage
+    MallPage,
+    GoodsDetailPage,
+    OrderConfirmPage
   ],
   providers: [
     StatusBar,

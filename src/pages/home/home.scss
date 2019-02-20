@@ -142,4 +142,12 @@ page-home {
         color: #666666;
         font-weight: 500;
     }
+    //弹出层
+    .shadowShare img{
+    height:rem(110);
+    width:rem(110);
+    }
+    .shadowShare img:nth-child(1){
+        margin-right:rem(94);
+    }
 }

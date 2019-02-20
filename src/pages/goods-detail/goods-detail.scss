@@ -1,0 +1,186 @@
+page-goods-detail {
+    //上部分背景
+    .goodsImg {
+        width: 100%;
+        height: rem(522);
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .goodsDetail {
+        position: absolute;
+        z-index: 2;
+        top: rem(496);
+        width: 100%;
+        border-top-left-radius: rem(26);
+        border-top-right-radius: rem(26);
+        background-color: #fff;
+        padding: rem(42) rem(30) rem(98);
+        img {
+            width: 100%;
+            height: rem(518);
+            border-radius: rem(8);
+            margin-bottom: rem(10);
+        }
+        h3 {
+            font-size: rem(32);
+            color: #333333;
+            font-weight: 500;
+            margin: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        p:nth-child(2) {
+            font-size: rem(24);
+            color: #999999;
+            font-weight: 500;
+        }
+        p:nth-child(3) {
+            font-size: rem(32);
+            color: #E65D4B;
+            font-weight: bold;
+        }
+        .goodsLine {
+            font-size: rem(24);
+            color: #999999;
+            font-weight: 500;
+            position: relative;
+            text-align: center;
+            margin-top: rem(24);
+            margin-bottom: rem(24);
+        }
+        .goodsLine:before,
+        .goodsLine:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            background: #EDEDED;
+            width: rem(250);
+            height: 1px;
+        }
+        .goodsLine:before {
+            left: 0;
+        }
+        .goodsLine:after {
+            right: 0;
+        }
+    }
+    //底部   
+    .bottomBox>div {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bottomBox>div:nth-child(1) {
+        width: rem(210);
+        text-align: center;
+        font-size: rem(22);
+        color: #222222;
+        font-weight: 500;
+        background-color: #fff;
+        img {
+            width: rem(40);
+            height: rem(40);
+        }
+        .cartBadge {
+            position: relative;
+        }
+        .cartBadge span {
+            background-color: #E65D4C;
+            font-size: rem(20);
+            color: #fff;
+            font-weight: normal;
+            border-radius: 50%;
+            padding: rem(4) rem(10);
+            position: absolute;
+            left: 23px;
+            top: -5px;
+        }
+    }
+    .bottomBox>div:nth-child(2),
+    .bottomBox>div:nth-child(3) {
+        flex: 1;
+        color: #FFFFFF;
+        font-size: rem(32);
+        font-weight: bold;
+    }
+    .bottomBox div:nth-child(2) {
+        background-color: #FFAB2C;
+    }
+    .bottomBox div:nth-child(3) {
+        background-color: #E65D4C;
+    }
+    .shadowShare .content {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: rem(400);
+        background-color: #fff;
+        border-top-left-radius: rem(10);
+        border-top-right-radius: rem(10);
+        padding:rem(30) rem(34) rem(42);
+        .imgClose {
+            width: rem(30);
+            height: rem(30);
+            float: right;
+        }
+        .priceClose{
+            height:rem(94);
+            padding-left: rem(234);  
+            div{
+                float: left;
+                height:100%;
+                display: flex;
+                align-items:flex-end;
+                color: #E65D4C;
+        font-size: rem(40);
+        font-weight: bold;
+            }
+        }
+        .num{
+            display: flex;
+            align-items: center;
+            padding: rem(42) 0 rem(38);
+            div{
+                flex:1;
+                display: flex;
+                align-items: center;
+                color:#222222;
+                font-weight: bold;
+                font-size:rem(32) ;
+                img{
+                    width:rem(66);
+                    height:rem(66)
+                }
+                span{
+                    margin:0 rem(34)
+                }
+            }
+            div:nth-child(2){
+                justify-content: flex-end;
+                font-size:rem(36) ;
+            }
+        }
+        .doBtn {
+        width:100%;
+        background-color: #E65D4B;
+        font-size: rem(34);
+        font-weight: 500;
+        margin: 0;
+       }
+    }
+    .shadowShare .imgGoods {
+        width: rem(200);
+        height: rem(200);
+        border-radius: rem(8);
+        position: fixed;
+        bottom: rem(276);
+        left: rem(34);
+        z-index: 12;
+    }
+}

@@ -1,0 +1,118 @@
+page-order-confirm {
+    .content-ios {
+        background-color: #F7F7F7;
+    }
+    .addr {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        padding: rem(44) rem(28);
+        font-size: rem(30);
+        font-weight: bold;
+        color: #222;
+        margin-top: rem(14);
+        .div {
+            flex: 1;
+            div {
+                margin-top: rem(8);
+            }
+        }
+        span:nth-child(2) {
+            font-weight: 500;
+            color: #666666;
+            margin-left: rem(36);
+        }
+        img {
+            width: rem(14);
+            height: rem(22);
+        }
+    }
+    .borderImg {
+        width: 100%;
+        height: rem(18);
+        display: block;
+    }
+    .goodsInfo {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        padding: rem(46) rem(30);
+        margin-top: rem(14);
+        img {
+            width: rem(200);
+            height: rem(200);
+            border-radius: rem(8);
+            margin-right: rem(30);
+        }
+        .details {
+            height: rem(200);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            p {
+                margin-top: rem(28);
+                font-weight: 500;
+                font-size: rem(32);
+                color: #333;
+            }
+            p,
+            div {
+                flex: 1;
+                padding-bottom: rem(20);
+            }
+            div {
+                display: flex;
+                align-items: flex-end;
+                span {
+                    flex: 1;
+                    font-weight: bold;
+                    font-size: rem(30);
+                    color: #E65D4C;
+                }
+                span:nth-child(2) {
+                    text-align: right;
+                    color: #666;
+                }
+            }
+        }
+    }
+    .payM {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        padding: rem(36) rem(30);
+        font-size: rem(30);
+        font-weight: 500;
+        color: #222;
+        margin-top: rem(22);
+        span {
+            flex: 1;
+        }
+        span:nth-child(2) {
+            text-align: right;
+        }
+    }
+    .bottomBox div:nth-child(1){
+        flex: 2;
+        padding:rem(28);
+        font-weight: 500;
+                    font-size: rem(28);
+                    color: #222; 
+                    span{
+                        font-size: rem(40);
+                    color: #E65D4C; 
+                    }
+    }
+    .bottomBox div:nth-child(2){
+        height:100%;
+        flex:1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+                    font-size: rem(34);
+                    background-color: #E65D4C;
+                    color: #fff;
+        
+    }
+}

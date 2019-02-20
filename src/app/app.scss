@@ -60,10 +60,15 @@ $tabImageName: 'home' 'shop' 'my';
     justify-content: center;
     align-items: center;
 }
-.shadowShare img{
-    height:rem(110);
-    width:rem(110);
-}
-.shadowShare img:nth-child(1){
-    margin-right:rem(94);
+
+//页面底部box
+.bottomBox{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 12;
+    width:100%;
+    height:rem(98);
+    background-color: #fff;
 }

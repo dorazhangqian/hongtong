@@ -24,18 +24,6 @@
 			<img src="assets/imgs/banner2.png" alt="" />
 		</ion-slide>
 	</ion-slides>
-	<div class='typeSort'>
-		<button ion-button outline>销量</button>
-		<button ion-button outline>价格</button>
-		<div>
-			<img src="" alt="" />
-			<img src="" alt="" />
-
-		</div>
-
-		
-		
-	</div>
 
 	<div class="goodsType">
 		<ion-segment [(ngModel)]="type" (ionChange)="segmentChanged($event)">
@@ -61,29 +49,36 @@
 			</ion-segment-button>
 		</ion-segment>
 	</div>
-
+	<div class='typeSort'>
+			<button ion-button outline (click)='sort("num")'>销量
+				<div class="sortImg">
+				<img src="assets/imgs/{{numSort?'icon_red_up_arrow@2x':'icon_gray_up_arrow@2x'}}.png" alt="" />
+				<img src="assets/imgs/{{numSort?'icon_gray_down_arrow@2x':'icon_red_down_arrow@2x'}}.png" alt="" />
+			</div>
+			</button>
+			<button ion-button outline (click)='sort("price")'>
+				价格
+				<div class="sortImg">
+				<img src="assets/imgs/{{priceSort?'icon_red_up_arrow@2x':'icon_gray_up_arrow@2x'}}.png" alt="" />
+				<img src="assets/imgs/{{priceSort?'icon_gray_down_arrow@2x':'icon_red_down_arrow@2x'}}.png" alt="" />
+			</div>
+			</button>
+		</div>
 	<div [ngSwitch]="type" class="typeList">
 		<ion-grid>
-  <ion-row>
-    <ion-col col-6 *ngFor='let item of goodsList'>
-    	<div class="goods">
-    	<img src="{{item.img}}" alt="" />
-    	<div class="goodsName">{{item.name}}</div>
-    	<div class="goodsPN">
-    		<span>{{item.price}} <span>元/月</span></span>
-    		<span>销量：{{item.num}}</span>
-    	</div>
-    	</div>
-    	
-    	
-    	
-    </ion-col>
-    
-  </ion-row>
-  
-</ion-grid>
-		
-
+			<ion-row>
+				<ion-col col-6 *ngFor='let item of goodsList' (click)='toGoodsDetail()'>
+					<div class="goods">
+						<img src="{{item.img}}" alt="" />
+						<div class="goodsName">{{item.name}}</div>
+						<div class="goodsPN">
+							<span>{{item.price}} <span>元/月</span></span>
+							<span>销量：{{item.num}}</span>
+						</div>
+					</div>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
 	</div>
 
 </ion-content>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { StagingFalsePage } from '../staging-false/staging-false';
 /**
  * Generated class for the ChooseStagingPage page.
@@ -8,19 +8,18 @@ import { StagingFalsePage } from '../staging-false/staging-false';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
-  selector: 'page-choose-staging2',
-  templateUrl: 'choose-staging2.html',
+  selector: 'page-staging',
+  templateUrl: 'staging.html',
 })
-export class ChooseStaging2Page {
+export class StagingPage {
 	showtype:boolean=false;
 	bankName:string='';
 	typeList:any=[
-	{id:1,name:'微信',img:'../assets/imgs/icon_wechatpaly@2x.png'},
-	{id:2,name:'银联',img:'../assets/imgs/icon_unionPay@2x.png'},
-	{id:3,name:'中国工商银行',img:'../assets/imgs/icon_ICBC@2x.png'},
-	{id:4,name:'兴业银行',img:'../assets/imgs/icon_industrial_bank@2x.png'}
+	{id:1,name:'微信',img:'assets/imgs/icon_wechatpaly@2x.png'},
+	{id:2,name:'银联',img:'assets/imgs/icon_unionPay@2x.png'},
+	{id:3,name:'中国工商银行',img:'assets/imgs/icon_ICBC@2x.png'},
+	{id:4,name:'兴业银行',img:'assets/imgs/icon_industrial_bank@2x.png'}
 	];
 	stagList:any=[
 	{name:'2期',price:320.90,price2:39.70},

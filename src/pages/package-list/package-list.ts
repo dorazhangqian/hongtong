@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { PackageDetailPage } from '../package-detail/package-detail';
 /**
  * Generated class for the PackageListPage page.
@@ -8,16 +8,15 @@ import { PackageDetailPage } from '../package-detail/package-detail';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-package-list',
   templateUrl: 'package-list.html',
 })
 export class PackageListPage {
     list:any=[
-	{id:3,img:'../assets/imgs/thumbnail.png',name:'套餐标题套餐标题套餐标题套餐标题套餐标题套餐标题',num:90,price:300},
-	{id:4,img:'../assets/imgs/thumbnail.png',name:'套餐标题套餐标题套餐标题套餐标题套餐标题套餐标题',num:90,price:300},
-	{id:5,img:'../assets/imgs/thumbnail.png',name:'套餐标题套餐标题套餐标题套餐标题套餐标题套餐标题',num:90,price:300}
+	{id:3,img:'assets/imgs/thumbnail.png',name:'套餐标题套餐标题套餐标题套餐标题套餐标题套餐标题',num:90,price:300},
+	{id:4,img:'assets/imgs/thumbnail.png',name:'套餐标题套餐标题套餐标题套餐标题套餐标题套餐标题',num:90,price:300},
+	{id:5,img:'assets/imgs/thumbnail.png',name:'套餐标题套餐标题套餐标题套餐标题套餐标题套餐标题',num:90,price:300}
 	];
 	shadowShare:boolean=false;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
